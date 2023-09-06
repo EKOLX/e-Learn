@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "embed_video",
     "redisboard",
+    "rest_framework",
     "debug_toolbar",
     "courses.apps.CoursesConfig",
     "students.apps.StudentsConfig",
@@ -134,3 +135,9 @@ CACHE_MIDDLEWARE_KEY_PREFIX = "ilearn"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}

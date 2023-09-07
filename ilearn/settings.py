@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "embed_video",
     "redisboard",
     "rest_framework",
+    "channels",
     # "debug_toolbar",
     "courses.apps.CoursesConfig",
     "students.apps.StudentsConfig",
@@ -141,4 +142,15 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
+}
+
+ASGI_APPLICATION = "ilearn.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
 }

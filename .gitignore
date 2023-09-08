@@ -1,4 +1,5 @@
 .venv/
+data/
 
 # Compiled Python bytecode
 *.py[cod]

@@ -7,7 +7,7 @@ ADMINS = [
     ("EL Khan", "elkhanmursali@gmail.com"),
 ]
 
-ALLOWED_HOSTS = ["localsofts.com", "www.localsofts.com"]
+ALLOWED_HOSTS = [".localsofts.com"]
 
 DATABASES = {
     "default": {

@@ -10,7 +10,7 @@ upstream daphne {
 
 server {
     listen 80;
-    server_name www.localsofts.com localsofts.com;
+    server_name *.localsofts.com localsofts.com;
     return 301 https://$host$request_uri;
 }
 
@@ -18,7 +18,7 @@ server {
     listen               443 ssl;
     ssl_certificate      /code/ilearn/ssl/ilearn.crt;
     ssl_certificate_key  /code/ilearn/ssl/ilearn.key;
-    server_name  www.localsofts.com localsofts.com;
+    server_name  *.localsofts.com localsofts.com;
     error_log    stderr warn;
     access_log   /dev/stdout main;
 
